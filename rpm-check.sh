@@ -27,3 +27,5 @@ fi
     fi
 } > "$1.test"
 echo "Results of rpm test in file $1.test"
+# 查询rpm 的man 页来查看rpm的选项
+exit 0
