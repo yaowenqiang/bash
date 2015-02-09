@@ -1,2 +1,2 @@
 some test file
-add another test
+add another test make a conflict
