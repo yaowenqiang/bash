@@ -32,3 +32,5 @@ EOF
 cat <<EOF
 \\z
 EOF
+variable=\
+echo "$variable"
