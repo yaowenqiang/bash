@@ -32,5 +32,7 @@ EOF
 cat <<EOF
 \\z
 EOF
-variable=\
-echo "$variable"
+
+# variable=\
+# echo "$variable"
+# 不能正常运行－会报错
