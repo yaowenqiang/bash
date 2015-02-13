@@ -87,3 +87,13 @@ then
 else
     echo "Null variable is false"
 fi      # NULL变量为假。
+
+
+echo
+echo "Testing \"false\""
+if [ "false" ] # 看起来"false" 只不过是一个字符串而已。
+then
+    echo "\"false\"  is true."
+else
+    echo "\"false\" is false"
+fi      # false为真。
