@@ -18,3 +18,14 @@ then
     echo "file contains at least one occurrence of Bash."
 fi
 
+word=linux
+letter_sequence=inu
+
+if echo "$word" | grep -q "$letter_sequence"
+# -q 选项是用来禁止输出的
+then
+    echo "$letter_sequence found in $word"
+else
+    echo "$letter_sequence not found in $word"
+fi
+
