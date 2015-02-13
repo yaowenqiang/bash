@@ -33,4 +33,15 @@ if COMMAND_WHOSE_EXIT_STATUS_IS_0_UNLESS_ERROR_OCCURRED
 then echo "Command succeeded."
 else echo "Command failed"
 fi
+# 一个if/then结构可以包含嵌套的比较操作和条件判断操作
+# TODO 下面这个真心看不懂
+if echo "Next *if* is part of the comparison for the first *if*."
+    if [[ $comparison = 'integer' ]]
+        then (( a < b ))
+    else
+        [[ $a < $b ]]
+    fi
+then
+    echo "$a is less than $b"
+fi
 
