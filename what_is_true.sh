@@ -53,3 +53,15 @@ then
 else
     echo "Ramdpm stromg is false"
 fi      # 随便的一串字符为真
+
+echo
+
+echo "Testing \"$xys\""
+if [ $xyz ]      # 判断$xyz是否为NULL,但是...
+                 # 这只是一个末初始化的变量。
+then        
+    echo "Uninitialized variable  is true."
+else
+    echo "Uninitialized variable is false"
+fi      # 末定义的初始化为假。
+
