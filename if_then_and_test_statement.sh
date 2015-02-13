@@ -29,3 +29,8 @@ else
     echo "$letter_sequence not found in $word"
 fi
 
+if COMMAND_WHOSE_EXIT_STATUS_IS_0_UNLESS_ERROR_OCCURRED
+then echo "Command succeeded."
+else echo "Command failed"
+fi
+
