@@ -97,3 +97,13 @@ then
 else
     echo "\"false\" is false"
 fi      # false为真。
+
+echo
+echo "Testing \"\$false\""      # 再来一个末初始化的变量
+if [ "$false" ]
+then
+    echo "\"\$false\"  is true."
+else
+    echo "\"\$false\" is false"
+fi      # "$false"为假。
+        # 现在我们得到了预期的结果
