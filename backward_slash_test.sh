@@ -54,4 +54,37 @@ variable=\\\\
 echo "$variable"                        # \\
                                         # 第2个和第4个反斜线被转义了 
                                         # 这里是正确的
+echo "foo
+bar"
+#foo
+#bar
+
+echo
+
+echo 'foo
+bar'     # 没什么区别
+#foo
+#bar
+
+echo
+
+echo foo\
+bar      #换行符被转义。
+#foobar
+
+echo
+
+echo "foo\
+bar"     # 与上边一样，\在部分引用中还是被解释为续行符.
+#foobar
+
+echo
+
+echo 'foo\
+bar'     # 由于是全引用，所以\没有被解释成续行符.
+#foo\
+#bar
+
+
 exit 0
+
