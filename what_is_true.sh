@@ -43,3 +43,13 @@ then
 else
     echo "NULL is false"
 fi      # NULL 为假
+
+echo
+
+echo "Testing \"xys\""
+if [ xyz ]      # 字符串
+then        
+    echo "Random string is true."
+else
+    echo "Ramdpm stromg is false"
+fi      # 随便的一串字符为真
