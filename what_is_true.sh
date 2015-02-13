@@ -10,5 +10,16 @@ echo "Testing \"0\""
 if [ 0 ]    #zero
 then
     echo "0 is true."
-fi
+else
+    echo "0 is false."
+fi          # 0 为真
 
+echo
+
+echo "Testing \"1\""
+if [ 1 ]
+then        # one
+    echo "1 is true."
+else
+    echo "1 is false"
+fi      # 1 为真
