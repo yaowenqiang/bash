@@ -56,7 +56,7 @@ fi      # 随便的一串字符为真
 
 echo
 
-echo "Testing \"$xys\""
+echo "Testing \"|$xys\""
 if [ $xyz ]      # 判断$xyz是否为NULL,但是...
                  # 这只是一个末初始化的变量。
 then        
@@ -69,7 +69,7 @@ fi      # 末定义的初始化为假。
 
 echo
 
-echo "Testing \"-n $xys\""
+echo "Testing \"-n \$xys\""
 if [ -n "$xyz" ] # 更加正规的条件检查。
 then        
     echo "Uninitialized variable  is true."
@@ -78,3 +78,12 @@ else
 fi      # 末定义的初始化为假。
 
 
+echo
+xyz=                #初始化了，但是是NULL值
+echo "Testing \"-n \$xys\""
+if [ -n "$xyz" ] # 更加正规的条件检查。
+then        
+    echo "Null variable  is true."
+else
+    echo "Null variable is false"
+fi      # NULL变量为假。
