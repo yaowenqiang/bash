@@ -107,3 +107,12 @@ else
     echo "\"\$false\" is false"
 fi      # "$false"为假。
         # 现在我们得到了预期的结果
+
+echo
+echo "Testing \"\$true\""
+if [ "$true" ]
+then
+    echo "\"\$true\"  is true."
+else
+    echo "\"\$true\" is false"
+fi      # "$true"为假。
