@@ -23,3 +23,23 @@ then        # one
 else
     echo "1 is false"
 fi      # 1 为真
+
+echo 
+
+echo "Testing \"-1\""
+if [ -1 ]
+then        # one
+    echo "-1 is true."
+else
+    echo "-1 is false"
+fi      # -1 为真
+
+echo
+
+echo "Testing \"NULL\""
+if [ ]      # NULL(空状态)
+then        
+    echo "NULL is true."
+else
+    echo "NULL is false"
+fi      # NULL 为假
