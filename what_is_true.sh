@@ -65,3 +65,16 @@ else
     echo "Uninitialized variable is false"
 fi      # 末定义的初始化为假。
 
+
+
+echo
+
+echo "Testing \"-n $xys\""
+if [ -n "$xyz" ] # 更加正规的条件检查。
+then        
+    echo "Uninitialized variable  is true."
+else
+    echo "Uninitialized variable is false"
+fi      # 末定义的初始化为假。
+
+
