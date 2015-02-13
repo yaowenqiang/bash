@@ -10,3 +10,11 @@ then echo "Files a and b are identical."
 else echo "Files a and b are differ."
 fi
 
+# 非常有用的"if-grep" 风格
+# ==============================
+
+if grep -q Bash escaped.sh
+then
+    echo "file contains at least one occurrence of Bash."
+fi
+
