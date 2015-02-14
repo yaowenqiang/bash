@@ -113,6 +113,9 @@ echo "Testing \"\$true\""
 if [ "$true" ]
 then
     echo "\"\$true\"  is true."
+    
+    
 else
-    echo "\"\$true\" is false"
+        echo "\"\$true\" is false"
 fi      # "$true"为假。
+
