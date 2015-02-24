@@ -28,4 +28,17 @@ fi
 
 echo
 
+# TODO 这个地方没看懂，不是很明白
+if /usr/bin/[ -z "$1" ]                 # 再来一个，与上边的代码作用相同
+# if /usr/bin/[ -z "$1"                 # 能够工作，但是还是给出一个错误消息
+#                                       # 注意:
+#                                         在版本3.x的Bash中,这个bug已经被修正
+then                                    
+     echo "No command-line arguments"
+ else
+     echo "First command-line argument is $1."
+fi
 
+echo
+
+exit 0
