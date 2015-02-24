@@ -45,4 +45,11 @@ file=/etc/passwd
 if [[ -e $file ]]; then
     echo "Password file exists."
 fi
+
+dir=/home/bozo
+if cd "$dir" 2>/dev/null;then       # 2>/dev/null会隐藏错误信息
+    echo "Now in $dir."
+else
+    echo "Can't change to $dir."
+fi
 exit 0
