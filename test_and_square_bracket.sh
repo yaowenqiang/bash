@@ -41,4 +41,8 @@ fi
 
 echo
 
+file=/etc/passwd
+if [[ -e $file ]]; then
+    echo "Password file exists."
+fi
 exit 0
