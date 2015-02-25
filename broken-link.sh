@@ -28,6 +28,7 @@
 ##########
 linkchk() {
     for element in $1/*;do
+        #TODO 下面这一句不是很懂
         [ -h "$element" -a ! -e "$element" ] && echo \"$element\"
         [ -d "$element" ] && linkchk \"$element\"
     # 当然，'-h' 用来测试符号链接，'-d'用来测试目录。’
