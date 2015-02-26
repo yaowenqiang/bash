@@ -43,7 +43,7 @@ until [ "$remainder" -eq 0 ]
 do
     let "remainder = $dividend % $divisor"
     dividend=$divisor           # 现在使用两个最小的数来重复。
-    divisor=$dividend
+    divisor=$remainder
 done                            # Euclid的算法
 }
 gcd $1 $2
