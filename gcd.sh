@@ -52,6 +52,7 @@ echo;
 echo "GCD of $1 and $2 = $dividend";echo
 
 # Exercise :
+# TODO
 # 检查传进来的命令行参数来确保它们都是整数
 # 如果不是整数，那就给出一个适当的错误消息并退出脚本
 exit 0
