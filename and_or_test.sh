@@ -30,7 +30,7 @@ fi
 #
 # -a 和 -o 选项提供了
 #+一种可选的混合条件测试的方法，
-if [ "$a" -eq 24 -a "$b " -eq 47 ]
+if ["$a" -eq 24 -a "$b " -eq 47 ]
 then
     echo "Test #3 succeeds."
 else
