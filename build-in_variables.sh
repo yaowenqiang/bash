@@ -198,5 +198,7 @@ echo -n "PID of \"$COMMAND1\":" >> "$LOG"
 # TODO 可能会报错，暂时末处理
 ${COMMAND1} &
 echo $! >> "$LOG"
+# possibly_hanging_job & { sleep ${TIMEOUT};eval `kill -9 $!` &>/dev/null}
+# 强制结束一个出错程序。
 # "sleep 100" 的PID; 1506
 exit 0
