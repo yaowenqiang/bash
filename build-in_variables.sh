@@ -123,3 +123,35 @@ echo $PIPESTATUS
 ls -al | bogus_command
 echo $?
 
+# TODO 没看懂
+echo $BASH_VERSION
+ls | bogus_command | wc
+echo ${PIPESTATUS[@]}
+
+# $PPID     你进程的ID
+# 和pidof比较一下
+# $PROMPT_COMMAND       保存了在主提示符$PS1显示之前需要执行的命令
+# $PS1                  主提示符，可以在命令行中见到它
+# $PS2                  第二提示符，当你需要额外输入的时候，你就会看到它，默认显示">"
+# $PS3                  第三提示符，它在一个select循环中显示
+# $PS4                  第四提示符，当你使用-x选项来调用脚本时，这个提示
+# 符会出现在第行的开头，默认显示"+".
+# PWD                   工作目录(你当前所在的目录)
+# 这与内建的pwd作用相同
+
+E_WRONG_DIRECTORY=73
+clear    # 清屏
+TargetDirectory=/home/Administrator/projects/GreatAmericanNovel
+cd $TargetDirectory
+echo "Deleting stale files in $TargetDirectory"
+if [ "$PWD" != "$TargetDirectory" ] 
+then                                # 禁止偶然删除目录。
+    echo "Wrong directory!"
+    echo "In $PWD,rather than $TargetDirectory!"
+    echo "Bailing out!"
+    exit $E_WRONG_DIRECTORY
+fi
+
+
+
+
