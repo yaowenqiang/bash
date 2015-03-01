@@ -182,3 +182,20 @@ echo "Deleting stale files in $TargetDirectory"
 # $*必须被引用起来
 # $@ 与$*相同，但是每个参数都是一个独立的引用字符串,这就意味着，参数是被完整传递的，并没有被解释或扩展，这也意味着，参数列表中每个参数都被看作为单独的单词，当然"$@"应该被引用起来。
 
+# $~        传递给脚本的标记(使用set命令)
+# $!        运行在后台的最后一个作业的PID
+
+LOG=$0.log
+COMMAND1="sleep 100"
+echo "Logging PIDs background commands for script: $0" >> "$LOG"
+
+# 所以它们是可以被监控的，并且可以在必要的时候kill掉它们
+
+echo >> "$LOG"
+
+
+echo -n "PID of \"$COMMAND1\":" >> "$LOG"
+${COMMAND1} &
+echo $! >> "$LOG"
+# "sleep 100" 的PID; 1506
+exit 0
