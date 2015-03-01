@@ -102,6 +102,24 @@ echo
 last_cmd_arg=$_         #  Save it.
 echo "As line number $LINENO,variable \"v1\" = $v1"
 echo "Last command argument processed = $last_cmd_arg"
-# *** 高度代码块结束 ###
+# *** 调试代码块结束 ###
 
+# $MACHTYPE         机器类型,标识系统的硬件
+
+# ODLPWD            之前的工作目录
+
+# $OSTYPE           操作系统顾炎武
+
+# $PATH             可执行文件的搜索路径
+# PATH=${PATH}:/opt/bin    将会把目录/opt/bin附加到当前目录列表中
+
+# $PIPESTATUS       保存最后一个运行的前台管道的退出状态码
+
+echo $PIPESTATUS
+
+ls -al | bogus_command
+echo $PIPESTATUS
+
+ls -al | bogus_command
+echo $?
 
