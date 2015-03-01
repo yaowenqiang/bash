@@ -8,9 +8,10 @@ INTEVAL=5                   # 超时间隔
 timeout_read() {
     timeout=$1
     varname=$2
-    old_tty_setting='stty -g '
-    stty -icanon min 0 time $(timeout)0     #TODO 看不懂
+    old_tty_setting=`stty -g`
+    stty -icanon min 0 time ${timeout}0     #TODO 看不懂
     eval read $varname          # 或者仅仅读取$varname变量
+                                # TODO 超时时会报错
     stty "$old_tty_setting"
     # 参考 stty的man页。
 }
