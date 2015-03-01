@@ -168,3 +168,8 @@ echo "Deleting stale files in $TargetDirectory"
 # $SHELLOPTS      shell中已经激活的选项的列表，这是一个只读变量
 # $SHLVL          Shell级别，就是Bash被嵌套的深度，如果是在命令行中，那么$SHLVL为１，如果在脚本中，那么$SHLVL为2
 
+# $TMOUT
+# 如果$TMOUT 环境变量被设置为非零值time的话，那么经过time秒后，shell提示符将会超时，这将会导致登出(logout)
+
+# $UID
+# 当前用户的用户ID标识号，记录在/etc/passwd文件中
