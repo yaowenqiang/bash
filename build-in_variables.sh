@@ -144,14 +144,22 @@ clear    # 清屏
 TargetDirectory=/home/Administrator/projects/GreatAmericanNovel
 cd $TargetDirectory
 echo "Deleting stale files in $TargetDirectory"
-if [ "$PWD" != "$TargetDirectory" ] 
-then                                # 禁止偶然删除目录。
-    echo "Wrong directory!"
-    echo "In $PWD,rather than $TargetDirectory!"
-    echo "Bailing out!"
-    exit $E_WRONG_DIRECTORY
-fi
+# if [ "$PWD" != "$TargetDirectory" ] 
+# then                                # 禁止偶然删除目录。
+#     echo "Wrong directory!"
+#     echo "In $PWD,rather than $TargetDirectory!"
+#     echo "Bailing out!"
+#     exit $E_WRONG_DIRECTORY
+# fi
+# rm -rf *
+# rm -[A-Za-z0-9]*      # 删除点文件(隐藏文件)
+# TODO 有点复杂，后面再仔细研究
+# rm -f .[^.]*   ..?*   为了删除以多个点开头的文件
+# ( shopt -s dotglob;rm -f * ) 也可以
 
-
+# echo 
+# echo "Done."
+# echo "Old files deleted in $TargetDirectory"
+# echo
 
 
