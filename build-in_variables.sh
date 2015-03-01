@@ -201,4 +201,16 @@ echo $! >> "$LOG"
 # possibly_hanging_job & { sleep ${TIMEOUT};eval `kill -9 $!` &>/dev/null}
 # 强制结束一个出错程序。
 # "sleep 100" 的PID; 1506
+# $_         这个变量保存之前执行的命令的最后一个参数的值
+
+echo $_         # /bin/bash
+                # 只是调用/bin/bash来运行这个脚本
+du >/dev/null   # 这么做命令行上将没有输出
+echo $_         # du
+ls -al >/dev/null    # 这么做命令行上将没有输出
+echo $_              # -al (这是最后的参数)
+
+:
+echo $_             # :     TODO :貌似没输出
 exit 0
+
