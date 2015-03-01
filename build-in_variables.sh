@@ -165,4 +165,6 @@ echo "Deleting stale files in $TargetDirectory"
 # $REPLY     当没有参数变量提供给read命令的时候，这个变量会作为默认变量会作为默认变量提供给read命令,也可以用于select菜单,但是只提供所选择变量的编写，而不是变量本身
 
 # $SECONDS        这个脚本已经运行的时间(以秒为单位)
+# $SHELLOPTS      shell中已经激活的选项的列表，这是一个只读变量
+# $SHLVL          Shell级别，就是Bash被嵌套的深度，如果是在命令行中，那么$SHLVL为１，如果在脚本中，那么$SHLVL为2
 
