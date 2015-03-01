@@ -195,6 +195,7 @@ echo >> "$LOG"
 
 
 echo -n "PID of \"$COMMAND1\":" >> "$LOG"
+# TODO 可能会报错，暂时末处理
 ${COMMAND1} &
 echo $! >> "$LOG"
 # "sleep 100" 的PID; 1506
