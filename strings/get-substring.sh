@@ -60,3 +60,13 @@ echo `expr $stringZ : '\(.[b-c]*[A-Z]..[0-9]\)'`
 echo `expr $stringZ : '\(.......\)'`
 
 # 上这的每个echo都打印出相同的结果。
+
+# expr match "$string".'.*\($substring\)'
+# 从$string的结尾提取$substring,$substring是正则表达式
+
+# expr "$string":'.*\($substring\)'
+# 从$string的结尾提取$substring,$substring是正则表达式
+
+stringZ=abcABC123ABCabc
+echo `expr match $stringZ  '.*\([A-C][A-C][A-C][a-c]*\)'`
+echo `expr $stringZ : '.*\(......\)'`
