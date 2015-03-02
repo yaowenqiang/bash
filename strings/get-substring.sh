@@ -38,3 +38,13 @@ echo ${stringZ: -4}         # Cabc
 echo ${*:2}             # 打印出第2个和后边所有的位置参数。
 echo ${@:2}             # 同上
 echo ${*:2:3}           # 从第二个开始，连续打印3个位置参数
+
+# expr substr $string $position $length
+# 在$string中从$position开始提取$length长度的子串
+
+
+stringZ=abcABC123ABCabc
+#   123456789
+#   从1开始计算。
+echo `expr substr $stringZ 1 2`     # ab
+echo `expr substr $stringZ 4 3`     # ABC
