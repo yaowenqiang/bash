@@ -19,6 +19,12 @@ fi
 
 for file in $directory/*        # 文件名匹配(filename globbing)
 do
+    ext=${file##*.}            # 获取后缀名
+    if [[ "$ext" = "mac" ]]; then
+        echo "$file is a .mac file"
+    else
+        echo "$file is not a .mac file"
+    fi
 filename=${file%.*c}            # 去掉文件名的".mac"后缀
                                 #+('.*c' 将会匹配
                                 #+'.'和'c'之间任意字串).
