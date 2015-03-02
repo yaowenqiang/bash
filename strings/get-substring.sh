@@ -48,3 +48,15 @@ stringZ=abcABC123ABCabc
 #   从1开始计算。
 echo `expr substr $stringZ 1 2`     # ab
 echo `expr substr $stringZ 4 3`     # ABC
+
+# expr match "$string".'\{$substring\}'
+# 从$string的开始位置提取$substring,$substring是正则表达式
+# expr "$string":'\{$substring\}'
+# 同上
+
+stringZ=abcABC123ABCabc
+echo `expr match $stringZ '\(.[b-c]*[A-Z]..[0-9]\)'`
+echo `expr $stringZ : '\(.[b-c]*[A-Z]..[0-9]\)'`
+echo `expr $stringZ : '\(.......\)'`
+
+# 上这的每个echo都打印出相同的结果。
