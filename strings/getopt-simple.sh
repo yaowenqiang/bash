@@ -1,5 +1,6 @@
 #!/bin/bash
 # getopt-simple.sh
+# getopt TODO 这个命令貌似很强大，后面要仔细研究一下
 # 
 
 getopt_simple()
