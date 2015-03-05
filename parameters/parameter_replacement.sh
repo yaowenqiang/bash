@@ -71,3 +71,9 @@ echo "a = $a"       # a = param5设置为null时a的值不会发生变化
 param6=123
 a=${param6:+xyz}
 echo "a = $a"       # a = xyz
+
+# ${parameter?err_msg},${parameter:?err_msg}
+# ${parameter?err_msg} - 如果parameter已经被声明，那么就使用设置的值，否则打印err_msg错误消息
+# ${parameter:?err_msg} - 如果parameter已经被设置，那么就使用设置的值，否则打印err_msg错误消息
+# 这两种形式绝大多数情况下都一样的，和上面边所讲的情况一样,只有在parameter被声明并且设置为nul值的时候，多出来的这个:才会引起这两种形式的不同
+# 示例刚parameter-error.sh
