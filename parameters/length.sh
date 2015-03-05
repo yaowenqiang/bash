@@ -20,5 +20,11 @@ fi
 var01=abcdEFGH28ij
 echo "var01 = ${var01}"
 echo "length of var01 = ${#var01}"
+# 现在，让我们试试在变量中嵌入一个空格。
+var02="abcd   EFGH28ij" # 加了空格以后长度会发生变化
+echo "var02 = ${var02}"
+echo "length of var02 = ${#var02}"
 
-
+echo "Number of command-line arguments passwd to script = ${#@}"
+echo "Number of command-line arguments passwd to script = ${#*}"
+exit 0
