@@ -20,3 +20,17 @@ echo '${var1#$pattern1} = ' "${var1#$pattern1}" # d12345abc6789
 
 echo '${var1##$pattern1} = ' "${var1##$pattern1}" # 6789
 # 最长的可能匹配，去掉abcd12345abc6789的前12个字符。
+#
+echo; echo; echo;
+
+pattern2=b*9                 # 匹配'b'到'9'之前的任意字符
+echo "var1 = ${var1}"       # 还是abcd12345abc6789
+echo
+echo "pattern2 = $pattern2"
+echo "---------------"
+echo '${var1%$pattern2} = ' "${var1%$pattern2}" # abcd12345a
+# 最短的可能匹配，去掉abcd12345abc6789的最后6个字符。
+echo '${var1%%$pattern2} = ' "${var1%%$pattern2}" # a
+# 最长的可能匹配，去掉abcd12345abc6789的最后15个字符。
+
+
