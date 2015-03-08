@@ -29,3 +29,5 @@ echo
 filename=test.data          # data
 echo "${filename##*.}"      # 文件扩展名
 
+# ${var%Pattern},${var%%Pattern}
+# i变量$var的结尾删除最短或最长匹配%Pattern的子串(译者注：这是一个很常见的用法，请读者牢记一个"%"表示匹配最短，"%%"表示匹配最长)
