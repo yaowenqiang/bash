@@ -33,5 +33,15 @@ v3=${v0/#123/000}               # 匹配，但不是在开头。
 echo "v3= $v3"                  # abcdef1234zip1234abc
                                 # 不会发生替换
 
+
+# ${!varprefix*},${!varprefix@}
+# 匹配所有之前声明过后，并且以varprefix开头的变量。
+xyz23=whatever
+xyz24=
+a=${!xyz*}          # 展开所有以"xyz"开头4 ，并且之前声明过的变量名。
+echo "a = $a"       # a = xyz23 xyz24
+a=${!xyz@}          # 同上。
+echo "a = $a"       # a = xyz23 xyz24
 exit 0
+
 
