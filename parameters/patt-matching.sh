@@ -16,3 +16,7 @@ echo
 echo "pattern1 = ${pattern1}"           # a*c    (匹配'a''c'之间的任意字符)
 echo "---------------"
 echo '${var1#$pattern1} = ' "${var1#$pattern1}" # d12345abc6789
+# 最短的可能匹配，去掉abcd12345abc6789的前3个字符。
+
+echo '${var1##$pattern1} = ' "${var1##$pattern1}" # 6789
+# 最长的可能匹配，去掉abcd12345abc6789的前12个字符。
