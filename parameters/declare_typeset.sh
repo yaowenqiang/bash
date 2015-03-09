@@ -65,4 +65,27 @@ echo "var2 declared as $var2"   # 试图修改只读变量的值
 var2=13.37                      # 产生错误消息，并且从脚本退出
 
 echo "var2 is still $var2"      # 将不会执换行到这行
-exit 0                          # 脚本也不会从此处出发
+
+foo()
+{
+    FOO="bar"
+}
+
+bar ()
+{
+    foo
+    echo $FOO
+}
+bar     # 打印bar
+
+foo()
+{
+    declare FOO="bar"
+}
+bar()
+{
+    foo
+    echo $FOO
+}
+bar         # 脚本也不会打印,TODO,貌似还是打印了
+exit 0
