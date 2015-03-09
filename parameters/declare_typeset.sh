@@ -12,3 +12,7 @@ declare -i number
 number=3
 echo "number = $number"     # Number = 3
 
+number=three
+echo "number = $number"     # Number = 0
+# 脚本尝试把字符串"three"作为整数来求值
+
