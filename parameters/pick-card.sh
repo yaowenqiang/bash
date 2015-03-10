@@ -38,6 +38,6 @@ num_denominations=${#Denomination[*]}             # 计算有多少个数组元�
 
 echo -n ${suite[$((RANDOM%$num_suites))]}
 echo " ${Denomination[$((RANDOM%$num_denominations))]}"
-
+# TODO 不是很懂怎么实现的
 
 
