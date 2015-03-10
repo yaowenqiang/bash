@@ -14,5 +14,7 @@ echo $rnumber
 # 如果$RANDOM返回0,那么就会失败.
 rnumber=$(( RANDOM%27/3*3+6))
 echo $rnumber
+# 改良公式
+# rnumber=$(((RANDOM%(max-min+divisibleBy))/divisibleBy*divisibleBy+min))
 # TODO 用法比较奇怪，看不懂。
 exit 0
