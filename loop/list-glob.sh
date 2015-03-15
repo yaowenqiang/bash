@@ -23,7 +23,6 @@ do
     echo "Removed file \"$file\"".
 done
 echo
-
 exit 0
 
 
