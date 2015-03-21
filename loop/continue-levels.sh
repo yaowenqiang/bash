@@ -20,3 +20,6 @@ do
     # 充者注:如果在此处添加echo当然也不会输出。
 done
 
+# 练习：        TODO
+# 在脚本加入一个有意义的"continue N"
+exit 0
