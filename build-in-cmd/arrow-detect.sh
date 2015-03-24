@@ -58,7 +58,7 @@ echo "Some other key  pressed."
 
 echo $OTHER
 
-# 练习:
+# 练习:     TODO 作业还末完成
 # ----
 # 1) 使用"case" 结构来代替"if"结构
 #    这样可以简化这个脚本。
