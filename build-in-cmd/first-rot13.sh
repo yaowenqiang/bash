@@ -10,5 +10,10 @@ setvar_rot_13()         # 'rot13'函数
 }
 
 setvar_rot_13 var "foobar"          # 将"foobar"传递到rot13函数中，
-echo $var
+echo $var                           # sbbone
+
+setvar_rot_13 var "$var"            # 传递'sbbone'到rot13函数中。
+                                    # 又变回了原始值，
+echo $var                           # foobar
+
 exit 0
