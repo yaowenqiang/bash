@@ -22,7 +22,7 @@ echo "Field #1 of `uname -a`= $2"
 echo "Field #1 of `uname -a`= $3"
 
 echo ---
-echo $_             ---
+echo $_             #---
 exit 0
 
 
