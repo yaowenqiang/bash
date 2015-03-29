@@ -18,5 +18,16 @@ echo $filename
 # 如果想了解'date'命令的更多选项，请查阅这个命令的man页。
 date +%N | sed -e 's/000$//' -e 's/^0//'
 #                   去掉开头和结尾的0
+date +%j
+# 显示今天是本年度的第几天(从1月份开始计算).
+
+date +%k:%M
+# 使用24小时的格式来显示当前小时数和分钟数。
+# "TZ"参数允许改变当前的默认时区。
+date            
+TZ=EST  date
+SixDaysAgo=$(date --date='6 days ago')
+OneMonthAgo=$(date --date='1 month ago')
+OneYearAgo=$(date --date='1 year ago')
 exit 0
 
