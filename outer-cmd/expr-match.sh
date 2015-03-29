@@ -35,3 +35,5 @@ echo "The laste 7 characters of \"$a\" are `expr "$a" : '.*\(.......\)'`."
 echo
 exit 0
 # TODO 还没完全看懂
+# 去掉字符串开头和结尾的空白.
+LRFDATE=`expr "$LRFDATE" : '[[:space:]]*\(.*\)[[:space:]]*$'`
