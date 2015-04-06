@@ -11,7 +11,7 @@ MINLEN=7
 if [[ -z "$1" ]]; then
     echo "Usage: $0 LATTERSET"
     exit $E_NOARGS
-elfi [ ${#1} -le $MINLEN ]
+elif [ ${#1} -le $MINLEN ]
 then
     echo "Argument must have at least $MINLEN letters."
     exit $E_BADARG
@@ -20,7 +20,7 @@ fi
 
 FILTER="......."            # 必须至少有7个字符。　
 #　     1234567
-Anagrams=( $(echo $(Anagrams $1 | grep $FILTER)))
+Anagrams=( $(echo $(anagram $1 | grep $FILTER)))
 #            |     |   嵌套的命令替换         | |
 #        (              数组分配                )
 
