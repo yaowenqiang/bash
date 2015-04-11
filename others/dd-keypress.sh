@@ -14,4 +14,6 @@ keys=$(dd bs=1 count=$keypresses 2> /dev/null)
 stty "$old_tty_settings"        # 恢复旧的终端设置
 
 echo "You pressed the \"$keys\" keys."
+# dd命令可以在数据流上做随机访问
+# echo -n . | dd bs=1 seek=4 of=file conv=notrunc
 exit 0
