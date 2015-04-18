@@ -122,12 +122,36 @@ COMMAND_SCRIPT >>
     # 对所有.txt文件的输出进行排序，并且删除重复行。
     # 最后将结果保存到'result-file'文件中。
 
-    
+    可以将输入输出重定向和(或)管道的多个实例结合到一起写在同一行上。
+    command < input-file > output-file
+    command1 | command2| command3 > output-file
 
+    可以将多个输出流重定向到到一个文件上。
+    ls -yx >> command.log 2>&1
+    # 将错误选项'yx'的结果放到文件'command.log'中。
+    # 因为stderr被重定向到这个文件中。
+    # 所有的错误消息也就都转向那里了。
 
+    # 注意，"下边这个例子就不会输出相同的结果。"
+    ls -yz 2>&1 >> command.log
 
+    # 输出一个错误消息，但是并不写到文件中。
 
+    # 如果将stdout和stderr都重定向，
+    # 命令的顺序会有些不同
 
+    n>&-
+        # 关闭输入文件描述符n
+    0<&-,<&-
+        # 关闭stdin
+    n>&-
+        # 关闭输出文件描述符n.
+    1>&-,>&-
+        # 关闭stdout.
+    # 只将stderr重定向到一个管道。
+    exec 3>&1                   # 保存当前stdout的'值'
+    # TODO 有点儿复杂，后面再研究。
+    ls -l 2>&1 >&3 3>&- | grep bad 3>&-
+                                # 对'grep'关闭fd 3(但不关闭'ls')
 
-
-
+    exec 3 > &-                 # 对于剩余的脚本来说，关闭它。
