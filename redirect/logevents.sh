@@ -22,7 +22,7 @@ set -o nounset                              # Treat unset variables as an error
 ROOT_UID=0      # 只有$UID值为0的用户才具有root权限
 E_NOTROOT=67    # 非root用户的退出错误
 
-if [ "$UID" -ne "$UID" ]; then
+if [ "$UID" -ne "$ROOT_UID" ]; then
     echo "Must be root to run this script."
     exit $E_NOTROOT
 fi
