@@ -32,7 +32,7 @@ FD_DEBUG2=4
 FD_DEBUG3=5
 # 去掉下边两地注释中的一行，来激活脚本.
 LOG_EVENTS=1
-LOG_VARS=1
+LOG_VARS=3
 log()       # 把时间和日期写入日志文件
 {
     echo "$(date) $*" >&7   # 这会把日期*附加*到文件中.
@@ -56,7 +56,7 @@ FD_LOGEVENTS=7
 if [[ $LOG_EVENTS ]]; then
     # log exec 7 > (exec gawk '{print strftime(),$0}' /var/log/event.log)
     # 上边这行不能在2.04版本的Bash上运行。
-    exec 7>> /var/log/event.log     # 附加到'event.log'
+    exec 7 >> /var/log/event.log     # 附加到'event.log'
     log                             # 记录日期与时间。
 else
     exec 7 > /dev/ull               # 丢弃输出。
@@ -67,3 +67,4 @@ ls -l >&5 2>&4                      # command1 >&5 2>&4
 echo "Done"                         # command2
 echo "sending mail" >&${FD_LOGEVENTS}   # 将字符串'sending mail'写到文件描述符#7
 exit 0
+# TODO 还没看懂这个脚本是做什么用的。
