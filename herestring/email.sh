@@ -43,7 +43,7 @@ mbox_grep()     # 分析邮箱文件
             # echo "$mail"
             # 如果你想显示整个消息体的话，那么就打开上面的注释行。
         elif [[ $mail ]];then
-            IFS=:read -r header value <<< "$mail"
+            IFS=: read -r header value <<< "$mail"
             case "$header" in
                 [Ff][Oo][Mm])[[ $value =~ "$2" ]] && (( match++ ));;
             # 匹配"From"行
@@ -73,3 +73,4 @@ exit $?
 # 1) 拆开上面这个函数，把它分成多个函数，
 #    这样可以提高代码的可读性，
 # 2) 对这个脚本添加额外的分析，可以不同的关键字。
+# TODO 邮件内容分析的还要再看一下，好像分析的结果有总是
