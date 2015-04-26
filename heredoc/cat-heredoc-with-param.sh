@@ -23,7 +23,7 @@ set -o nounset                              # Treat unset variables as an error
 # 不传命令行参数给它    ./scriptname
 # 传一个命令行参数给它    ./scriptname Mortimer
 # 传一个包含2个单词(用绰号括起来)的命令参数给它，
-# 。/scriptname "Mortimer Jones"
+# ./scriptname "Mortimer Jones"
 
 CMDLINEPARAM=1 # 所期望的最少的命令行参数个数。
 
