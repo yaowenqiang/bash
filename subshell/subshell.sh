@@ -48,7 +48,4 @@ echo "From main body of shell,\"inner_variable\" = $inner_variable"
 # 还有补救的办法么？
 # TODO
 echo
-
-
-
 exit 0
