@@ -46,6 +46,7 @@ echo "From main body of shell,\"inner_variable\" = $inner_variable"
 # 这是因为亦是是在子shell里定义的'局部亦是'
 
 # 还有补救的办法么？
+# TODO
 echo
 
 exit 0
