@@ -22,7 +22,7 @@ set -o nounset                              # Treat unset variables as an error
 DOC_REQUEST=70
 if [ "$1" = "-h" -o "$1" = "--help" ]; then
     echo;echo "Usage: $0 [directory-name]";echo
-    sed --slient -e '/DOCUMENTATIONXXX$/,/^DOCUMENTATIONXXX/p' "$0" | sed -e '/DOCUMENTATIONXXX$/d';exit $DOC_REQUEST;
+    sed --silent -e '/DOCUMENTATIONXXX$/,/^DOCUMENTATIONXXX/p' "$0" | sed -e '/DOCUMENTATIONXXX$/d';exit $DOC_REQUEST;
 fi
 
 : <<DOCUMENTATIONXXX
