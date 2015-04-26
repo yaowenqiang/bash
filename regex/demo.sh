@@ -29,7 +29,9 @@ EOF
 # N是sed中的一个命令，
 # 将下一行添加到pattern space中，将当前读入行和用N命令添加的下一行看成是"一行"
 # & 代表patten space匹配的内容，可以通过&来进行引用,在vim的ｓ命令中也同样适用．
+# 参考ttp://www.cnblogs.com/fhefh/archive/2011/11/14/2248942.html
 # 后面还需要再深入研究一下，TODO
+
 echo
 awk '{ $0=$1 "\n" $2;if(/line.1/){print}}' << EOF
 line 1
