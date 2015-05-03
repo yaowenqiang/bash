@@ -50,7 +50,7 @@ elif [ "$return_val" -eq "$EQUAL" ]
 then
     echo "The tow numbers are equal."
 else
-    echo "The larger of the two numbers is $return_val"
+    echo "The larger of the two numbers is $ueturn_val"
 fi
 # ==============================================
 
