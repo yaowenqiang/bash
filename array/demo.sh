@@ -85,4 +85,14 @@ echo -n "area3[24] = "
 echo ${area3[24]}
 
 # --------------------------------------------------------------------------------
+
+string=abcABC123ABCabc
+echo ${string[@]}       # abcABC123ABCabc
+echo ${string[*]}       # abcABC123ABCabc
+echo ${string[0]}       # 没有输出!
+echo ${string[1]}       # 为什么?       TODO
+echo ${#string[@]}      # 1
+
+                        # 数组中只有一个元素,　
+                        # 就是这个字符串本身,
 exit 0
