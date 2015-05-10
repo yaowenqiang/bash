@@ -7,3 +7,5 @@ WHATEVER=65
 echo "This line will never print (betcha!)."
 
 exit $WHATEVER  # 不要紧，脚本是不会在这的。
+
+# test
